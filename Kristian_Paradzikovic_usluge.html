@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Usluge — Kristian Rent a Car</title>
+  <meta name="description" content="Usluge najma vozila — Kristian Rent a Car. Dnevni najam, vikend paketi, dugoročni najam i dodatna oprema." />
+  <link rel="stylesheet" href="Kristian_Paradzikovic_style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo.svg" alt="Logo Rent a Car" />
+        <span class="brand-text">Kristian Rent a Car</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Otvori izbornik</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Glavna navigacija">
+        <a class="nav-link" href="index.html">Naslovnica</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_onama.html">O nama</a>
+        <a class="nav-link active" href="Kristian_Paradzikovic_usluge.html">Usluge</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_cjenik.html">Cjenik</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_galerija.html">Galerija</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Usluge</h1>
+          <p class="lead">
+            Nudimo najam vozila za sve situacije ✓ kratkoročni (1–7 dana), vikend i dugoročni najam.
+            Biraj između gradskih auta, putnih modela i vozila za poslovne potrebe, uz dodatke poput dječje sjedalice ili navigacije.
+          </p>
+
+          <p>
+            Za točne cijene vidi <a href="Kristian_Paradzikovic_cjenik.html">Cjenik</a>, a primjere vozila pogledaj u
+            <a href="Kristian_Paradzikovic_galerija.html">Galeriji</a>.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#paketi">Paketi</a>
+            <a class="btn btn-ghost" href="#promo-video">Video</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="proizvod1.jpeg" alt="Vozilo iz rent a car ponude" loading="lazy" />
+          <p class="caption">Fotografija vozila iz sport / premium ponude.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="paketi" class="section">
+      <div class="container">
+        <h2>Paketi usluga</h2>
+        <p class="muted">Tri jasna paketa olakšavaju izbor i usporedbu.</p>
+
+        <div class="grid cards">
+          <article class="card">
+            <h3>Basic (City)</h3>
+            <p>Uključuje: osnovno osiguranje, vozilo za gradske vožnje, priprema i čišćenje vozila.</p>
+            <p>Za koga: kratke vožnje po gradu, turisti i dnevne potrebe.</p>
+            <p>Rok: preuzimanje isti dan (ovisno o dostupnosti) ili po dogovoru.</p>
+          </article>
+
+          <article class="card">
+            <h3>Standard (Travel)</h3>
+            <p>Uključuje: opcije proširenog osiguranja, pomoć na cesti, dodatni vozač (po dogovoru).</p>
+            <p>Za koga: putovanja, vikendi, obiteljske vožnje i više prtljage.</p>
+            <p>Rok: preporuka rezervacije 24h prije termina za najbolju dostupnost.</p>
+          </article>
+
+          <article class="card">
+            <h3>Pro (Business / Long)</h3>
+            <p>Uključuje: dugoročni najam, prioritetna podrška, fleksibilniji uvjeti preuzimanja/povrata.</p>
+            <p>Za koga: poslovni korisnici, sezonski najam i duže relacije.</p>
+            <p>Rok: preporuka rezervacije 48h+ ranije za izbor točnog modela.</p>
+          </article>
+        </div>
+
+        <p class="note">
+          Ne znaš koji paket odabrati? Pošalji termin i željenu kategoriju vozila
+          <a href="Kristian_Paradzikovic_kontakt.html">ovdje</a> i dobit ćeš preporuku.
+        </p>
+      </div>
+    </section>
+
+    <section id="promo-video" class="section alt">
+      <div class="container">
+        <h2>Promo video (sa zvukom)</h2>
+        <p class="muted">
+          Video prikazuje flotu izvana, interijer i prtljažnik te preuzimanje ključeva.
+          Dodani su tekstualni overlayi, zvuk i watermark logotipa.
+        </p>
+
+        <div class="video-wrap">
+          <video controls preload="metadata">
+            <source src="promo.mp4" type="video/mp4" />
+            Tvoj preglednik ne podržava video.
+          </video>
+        </div>
+
+        <p class="caption">Preporučeno trajanje: 20–40 sekundi, s jasnim prikazom usluge.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo.svg" alt="Logo Rent a Car" />
+        <p class="muted">© <span id="year"></span> Kristian Rent a Car</p>
+      </div>
+      <div class="footer-links">
+        <a href="Kristian_Paradzikovic_onama.html">O nama</a>
+        <a href="Kristian_Paradzikovic_galerija.html">Galerija</a>
+        <a href="Kristian_Paradzikovic_kontakt.html">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

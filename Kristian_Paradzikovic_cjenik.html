@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cjenik — Kristian Rent a Car</title>
+  <meta name="description" content="Cjenik najma vozila — Kristian Rent a Car. Paketi, što je uključeno i napomene o depozitu i osiguranju." />
+  <link rel="stylesheet" href="Kristian_Paradzikovic_style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo.svg" alt="Logo Rent a Car" />
+        <span class="brand-text">Kristian Rent a Car</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Otvori izbornik</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Glavna navigacija">
+        <a class="nav-link" href="index.html">Naslovnica</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_onama.html">O nama</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_usluge.html">Usluge</a>
+        <a class="nav-link active" href="Kristian_Paradzikovic_cjenik.html">Cjenik</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_galerija.html">Galerija</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Cjenik</h1>
+          <p class="lead">
+            Cijene ovise o kategoriji vozila, sezoni i trajanju najma ✓ U cijenu su uključeni osnovni troškovi pripreme vozila,
+            a dodatne opcije (dječja sjedalica, dodatni vozač, full kasko) biraju se prema potrebi.
+            Za najam na više dana nudimo popuste. ★
+          </p>
+          <p>
+            Ako nisi siguran koji paket ti treba, pogledaj <a href="Kristian_Paradzikovic_usluge.html">Usluge</a> ili
+            se javi preko <a href="Kristian_Paradzikovic_kontakt.html">Kontakta</a>.
+          </p>
+        </div>
+
+        <div class="hero-media">
+          <img src="galerija_luxury.jpeg" alt="Vozilo iz luxury kategorije" loading="lazy" />
+          <p class="caption">Fotografija vozila iz business / luxury kategorije.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Paketi i cijene</h2>
+        <p class="muted">
+          Prikazane su informativne cijene po danu. Točan iznos ovisi o terminu i trajanju najma.
+        </p>
+
+        <div class="table-wrap">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Paket</th>
+                <th>Uključuje</th>
+                <th>Cijena</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Basic (City)</td>
+                <td>Gradsko vozilo, osnovno osiguranje, priprema vozila, primjer vozila u <a href="Kristian_Paradzikovic_galerija.html">galeriji</a>.</td>
+                <td>€ 35 / dan</td>
+              </tr>
+              <tr>
+                <td>Standard (Travel)</td>
+                <td>Prostranije vozilo, pomoć na cesti, opcija dodatnog vozača, primjeri u <a href="Kristian_Paradzikovic_galerija.html">galeriji</a>.</td>
+                <td>€ 49 / dan</td>
+              </tr>
+              <tr>
+                <td>Pro (Business / Long)</td>
+                <td>Dugoročni najam, fleksibilniji povrat, prioritetna podrška, vozila u <a href="Kristian_Paradzikovic_galerija.html">galeriji</a>.</td>
+                <td>€ 65 / dan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="note">
+          Depozit i osiguranje ovise o kategoriji i opcijama. Za točan izračun pošalji termin i lokaciju preuzimanja preko
+          <a href="Kristian_Paradzikovic_kontakt.html">Kontakta</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo.svg" alt="Logo Rent a Car" />
+        <p class="muted">© <span id="year"></span> Kristian Rent a Car</p>
+      </div>
+      <div class="footer-links">
+        <a href="Kristian_Paradzikovic_onama.html">O nama</a>
+        <a href="Kristian_Paradzikovic_galerija.html">Galerija</a>
+        <a href="Kristian_Paradzikovic_kontakt.html">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kristian Paradžiković — Rent a Car</title>
+  <meta name="description" content="Responzivno web-sjedište (završni ispit) — Rent a Car naslovnica." />
+  <link rel="stylesheet" href="Kristian_Paradzikovic_style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Povratak na naslovnicu">
+        <img class="brand-logo" src="logo.svg" alt="Logo Rent a Car" />
+        <span class="brand-text">Kristian Rent a Car</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Otvori izbornik</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Glavna navigacija">
+        <a class="nav-link active" href="index.html">Naslovnica</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_onama.html">O nama</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_usluge.html">Usluge</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_cjenik.html">Cjenik</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_galerija.html">Galerija</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Rent a Car — brzo, sigurno i bez stresa</h1>
+          <p class="lead">
+            Dobrodošli u Kristian Rent a Car ✓ Nudimo pouzdana vozila za grad, putovanja i poslovne potrebe uz jasne uvjete najma i brzu rezervaciju.
+            Preuzimanje je jednostavno, a podrška dostupna kada zatreba. ★ Odaberite vozilo i krenite bez komplikacija.
+          </p>
+
+          <p>
+            Pogledaj naše <a href="Kristian_Paradzikovic_usluge.html">usluge</a> i pakete najma ili provjeri
+            <a href="Kristian_Paradzikovic_cjenik.html">cjenik</a> kako bi odmah znao ukupnu cijenu.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="Kristian_Paradzikovic_kontakt.html">Rezerviraj vozilo</a>
+            <a class="btn btn-ghost" href="#istaknuto">Saznaj više</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="galerija_city.jpeg" alt="Rent a car vozilo iz ponude" loading="lazy" />
+          <p class="caption">Fotografija vozila iz ponude (vlastiti materijal).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="istaknuto" class="section">
+      <div class="container">
+        <h2>Istaknuto</h2>
+        <p class="muted">Tri glavna razloga zašto nas korisnici biraju: brzina, kvaliteta i podrška.</p>
+
+        <div class="grid cards">
+          <article class="card">
+            <h3>Brza rezervacija</h3>
+            <p>Rezervacija u par minuta: odabir vozila, termina i lokacije preuzimanja bez nepotrebnih koraka.</p>
+          </article>
+          <article class="card">
+            <h3>Pouzdana i čista vozila</h3>
+            <p>Vozila su redovno servisirana i pripremljena za put. Sigurnost, udobnost i urednost su prioritet.</p>
+          </article>
+          <article class="card">
+            <h3>Podrška 0–24</h3>
+            <p>Za pomoć na cesti ili pitanja oko najma dostupni smo u bilo koje vrijeme.</p>
+          </article>
+        </div>
+
+        <p class="note">
+          Pogledaj primjere u <a href="Kristian_Paradzikovic_galerija.html">Galeriji</a> ili pošalji upit preko
+          <a href="Kristian_Paradzikovic_kontakt.html">Kontakta</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+      <h2 class="center-title">Promo video</h2>
+
+
+        <div class="video-wrap">
+          <video controls preload="metadata">
+            <source src="promovideo.mp4" type="video/mp4" />
+            Tvoj preglednik ne podržava video.
+          </video>
+        </div>
+
+        <p class="caption">Naša vozila za odabir</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo.svg" alt="Logo Rent a Car" />
+        <p class="muted">© <span id="year"></span> Kristian Rent a Car</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="Kristian_Paradzikovic_onama.html">O nama</a>
+        <a href="Kristian_Paradzikovic_galerija.html">Galerija</a>
+        <a href="Kristian_Paradzikovic_kontakt.html">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

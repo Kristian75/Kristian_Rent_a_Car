@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt — Kristian Rent a Car</title>
+  <meta name="description" content="Kontakt — Kristian Rent a Car. Upit i rezervacija vozila." />
+  <link rel="stylesheet" href="Kristian_Paradzikovic_style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo.svg" alt="Logo Rent a Car" />
+        <span class="brand-text">Kristian Rent a Car</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Otvori izbornik</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Glavna navigacija">
+        <a class="nav-link" href="index.html">Naslovnica</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_onama.html">O nama</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_usluge.html">Usluge</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_cjenik.html">Cjenik</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_galerija.html">Galerija</a>
+        <a class="nav-link active" href="Kristian_Paradzikovic_kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Kontakt i rezervacija</h1>
+          <p class="lead">
+            Pošalji upit za rezervaciju ✓ U poruci napiši datum preuzimanja, datum povrata, željenu kategoriju vozila i lokaciju.
+            Odgovaramo brzo i šaljemo potvrdu dostupnosti te ukupnu cijenu.
+          </p>
+
+          <p>
+            Email: <a href="mailto:rezervacije@kristianrentacar.hr">rezervacije@kristianrentacar.hr</a><br />
+            Telefon: <a href="tel:+385910000000">+385 91 000 0000</a>
+          </p>
+
+          <p>
+            Prije slanja upita pogledaj <a href="Kristian_Paradzikovic_cjenik.html">cjenik</a> i
+            <a href="Kristian_Paradzikovic_usluge.html">usluge</a> kako bi lakše odabrao paket.
+          </p>
+        </div>
+
+        <div class="hero-media">
+          <img src="kontakt.jpeg" alt="Kontakt i rezervacija vozila" loading="lazy" />
+          <p class="caption">Kontaktiraj nas za dostupnost i rezervaciju.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Pošalji upit</h2>
+        <p class="muted">
+          Ispuni obrazac i u poruci navedi datume, lokaciju preuzimanja i željenu kategoriju vozila.
+        </p>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+          <label class="field">
+            <span>Ime i prezime</span>
+            <input type="text" name="ime" placeholder="Npr. Ivan Horvat" required />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="npr. ivan@example.com" required />
+          </label>
+
+          <label class="field">
+            <span>Poruka</span>
+            <textarea name="poruka" rows="6" placeholder="Npr. Termin: 12.07.–15.07., preuzimanje: Rijeka, kategorija: Travel, 1 dodatni vozač. Molim ponudu." required></textarea>
+          </label>
+
+          <button class="btn" type="submit">Pošalji</button>
+          <p class="caption">Alternativno, kontaktiraj nas putem e-maila ili telefona.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo.svg" alt="Logo Rent a Car" />
+        <p class="muted">© <span id="year"></span> Kristian Rent a Car</p>
+      </div>
+      <div class="footer-links">
+        <a href="Kristian_Paradzikovic_onama.html">O nama</a>
+        <a href="Kristian_Paradzikovic_galerija.html">Galerija</a>
+        <a href="Kristian_Paradzikovic_kontakt.html">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

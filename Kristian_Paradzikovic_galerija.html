@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerija — Kristian Rent a Car</title>
+  <meta name="description" content="Galerija vozila i dodatne opreme — Kristian Rent a Car. Primjeri flote i autorska grafika." />
+  <link rel="stylesheet" href="Kristian_Paradzikovic_style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo.svg" alt="Logo Rent a Car" />
+        <span class="brand-text">Kristian Rent a Car</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Otvori izbornik</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Glavna navigacija">
+        <a class="nav-link" href="index.html">Naslovnica</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_onama.html">O nama</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_usluge.html">Usluge</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_cjenik.html">Cjenik</a>
+        <a class="nav-link active" href="Kristian_Paradzikovic_galerija.html">Galerija</a>
+        <a class="nav-link" href="Kristian_Paradzikovic_kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Galerija</h1>
+          <p class="lead">
+            Ovdje su primjeri vozila iz ponude, kadrovi interijera i prtljažnika te primjeri premium kategorije ✓
+            U nastavku se nalazi autorska grafika izrađena za potrebe promocije.
+          </p>
+          <p>
+            Želiš provjeriti dostupnost? Pošalji upit preko <a href="Kristian_Paradzikovic_kontakt.html">Kontakta</a>
+            ili pogledaj <a href="Kristian_Paradzikovic_cjenik.html">Cjenik</a>.
+          </p>
+        </div>
+
+        <div class="hero-media">
+          <img src="galerija_naslovna.jpeg" alt="Vozilo iz ponude" loading="lazy" />
+          <p class="caption">Najbolja fotografija vozila iz flote.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Vozila u ponudi</h2>
+        <p class="muted">
+          Kolekcija fotografija vozila iz različitih kategorija (city, travel, suv, luxury) te primjeri premium paketa.
+        </p>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="galerija.jpeg" alt="Sportski automobil - city klasa" loading="lazy" />
+            <figcaption>City / Sport klasa — brzo i elegantno</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="galerija_travel2.jpeg" alt="Putnički automobil - travel klasa" loading="lazy" />
+            <figcaption>Travel klasa — idealno za putovanja</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="galerija_travel.jpeg" alt="SUV i premium vozilo" loading="lazy" />
+            <figcaption>SUV / Premium klasa — udobnost i snaga</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="galerija_luxury.jpeg" alt="Luksuzni automobil" loading="lazy" />
+            <figcaption>Luxury klasa — poslovni i VIP najam</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="proizvod1.jpeg" alt="Sportski automobil u vožnji" loading="lazy" />
+            <figcaption>Sportski paket — maksimalni doživljaj</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="galerija_suv.jpeg" alt="Business vozilo ispred hotela" loading="lazy" />
+            <figcaption>Business paket — profesionalni izgled</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+</div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo.svg" alt="Logo Rent a Car" />
+        <p class="muted">© <span id="year"></span> Kristian Rent a Car</p>
+      </div>
+      <div class="footer-links">
+        <a href="Kristian_Paradzikovic_onama.html">O nama</a>
+        <a href="Kristian_Paradzikovic_galerija.html">Galerija</a>
+        <a href="Kristian_Paradzikovic_kontakt.html">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#primary-nav');
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
